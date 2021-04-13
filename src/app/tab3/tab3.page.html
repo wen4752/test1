@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cloud Storage
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let ifoto of urlImageStorage; index as position">
+        <ion-img [src]='ifoto'></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  
+  <ion-list *ngFor="let ifoto of urlImageStorage; index as position">
+    <ion-item>
+      <ion-img [src]='ifoto.url' (click)='detail(ifoto)'></ion-img>
+      {{ifoto.nama}}
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

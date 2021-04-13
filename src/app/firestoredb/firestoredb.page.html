@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>firestoredb</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input placeholder='judul' [(ngModel)]='judul'></ion-input>
+  <ion-input placeholder='isi' [(ngModel)]='isi'></ion-input>
+  <ion-button (click)='simpan()'>simpan</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor='let data of isiData | async'>
+      <h1>{{data.judul}}</h1>
+      <p>{{data.isi}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
